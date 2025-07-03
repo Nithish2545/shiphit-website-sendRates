@@ -1,10 +1,6 @@
 function getUpdatedTrackingStructure(trackingData, statusTrail) {
   const STATUS_OUT_FOR = "Out For Delivery Today";
   const STATUS_DELIVERED = "DELIVERED";
-  const STATUS_DELAY_1 =
-    "We are experiencing transit delays. We will deliver your package as soon as possible.";
-  const STATUS_DELAY_2 =
-    "We are experiencing transit delays. We will deliver your package as soon as possible. / Your package";
 
   const fixedStructure = [
     { Status: "Custom clearance" },
@@ -22,6 +18,8 @@ function getUpdatedTrackingStructure(trackingData, statusTrail) {
     );
   }
 
+  const delayRegex = /\bdelay(ed)?\b/i;
+
   function processTrackingData(data) {
     const finalStatuses = [];
     const delayStatus = [];
@@ -37,7 +35,7 @@ function getUpdatedTrackingStructure(trackingData, statusTrail) {
 
       if (Status === STATUS_OUT_FOR || Status === STATUS_DELIVERED) {
         finalStatuses.push(entry);
-      } else if (Status === STATUS_DELAY_1 || Status === STATUS_DELAY_2) {
+      } else if (delayRegex.test(Status)) {
         delayStatus.push({
           ...entry,
           Status: "Custom clearance",

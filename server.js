@@ -23,7 +23,7 @@ const limiter = rateLimit({
   message: "Too many requests from this IP, please try again later.",
 });
 app.use(limiter);
-app.use("/api/tracking/v1", vendor);
+app.use("/api/tracking/v2", vendor);
 
 app.get("/", (req, res) => {
   console.log(new Date());
