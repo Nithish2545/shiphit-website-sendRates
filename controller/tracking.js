@@ -3,6 +3,7 @@ import getVendorTrackingDetails from "../vendordata/vendor-api-data.js";
 import getTrackingStatus from "../Utilis/dataformat.js";
 import { readFile } from "fs/promises";
 import admin from "firebase-admin";
+import getUpdatedTrackingStructure from "../Utilis/formatedTrackingDetails.js";
 
 // Load service account JSON using fs/promises
 const serviceAccount = JSON.parse(
@@ -38,23 +39,43 @@ const getTrackingDetails = async (req, res) => {
     }
 
     const docData = snapshot.docs[0].data();
-    const statusTrail = getTrackingStatus(docData.status);
+    const statusTrail = getTrackingStatus(docData.status, docData);
 
     if (docData.status !== "SHIPMENT CONNECTED") {
       return res.status(200).json({
         awbNumber,
         currentStatus: docData.status,
         statusTrail,
+        vendorData: [
+          {
+            Status: "DELIVERD",
+            Location: "",
+            Progress: false,
+            DateTime: "",
+          },
+          {
+            Status: "On the way",
+            Location: "",
+            Progress: false,
+            DateTime: "",
+          },
+          {
+            Status: "Custom Clearence",
+            Location: "",
+            Progress: false,
+            DateTime: "",
+          },
+        ],
       });
     }
 
     // If SHIPMENT CONNECTED, get vendor details and return
-    const vendorResponse = await getVendorTrackingDetails(
-      docData.status,
-      requestBody,
+    const vendorResponse = await getVendorTrackingDetails(requestBody);
+    const updatedStructure = getUpdatedTrackingStructure(
+      vendorResponse,
       statusTrail
     );
-    return res.send(vendorResponse); // <-- return added here
+    return res.send(updatedStructure); // <-- return added here
   } catch (error) {
     console.log(error);
     return res.status(500).json({ error: "Internal server error" });

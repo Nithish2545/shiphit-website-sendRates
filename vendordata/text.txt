@@ -1,0 +1,299 @@
+const trackingData = [
+            {
+                "EventDate": "16/05/2025",
+                "EventTime": "1409",
+                "EventDate1": "16th May 2025",
+                "EventTime1": "2:09 PM",
+                "Location": "UNION CITY",
+                "Status": "DELIVERED",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "16/05/2025",
+                "EventTime": "0845",
+                "EventDate1": "16th May 2025",
+                "EventTime1": "8:45 AM",
+                "Location": "Fremont",
+                "Status": "Out For Delivery Today",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "16/05/2025",
+                "EventTime": "0801",
+                "EventDate1": "16th May 2025",
+                "EventTime1": "8:01 AM",
+                "Location": "Fremont",
+                "Status": "Processing at UPS Facility",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "16/05/2025",
+                "EventTime": "0658",
+                "EventDate1": "16th May 2025",
+                "EventTime1": "6:58 AM",
+                "Location": "Fremont",
+                "Status": "Arrived at Facility",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "16/05/2025",
+                "EventTime": "0615",
+                "EventDate1": "16th May 2025",
+                "EventTime1": "6:15 AM",
+                "Location": "Oakland",
+                "Status": "Departed from Facility",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "16/05/2025",
+                "EventTime": "0420",
+                "EventDate1": "16th May 2025",
+                "EventTime1": "4:20 AM",
+                "Location": "Oakland",
+                "Status": "Arrived at Facility",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "16/05/2025",
+                "EventTime": "0249",
+                "EventDate1": "16th May 2025",
+                "EventTime1": "2:49 AM",
+                "Location": "Louisville",
+                "Status": "Departed from Facility",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "16/05/2025",
+                "EventTime": "0121",
+                "EventDate1": "16th May 2025",
+                "EventTime1": "1:21 AM",
+                "Location": "Louisville",
+                "Status": "Import Scan",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "15/05/2025",
+                "EventTime": "2220",
+                "EventDate1": "15th May 2025",
+                "EventTime1": "10:20 PM",
+                "Location": "Louisville",
+                "Status": "Arrived at Facility",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "15/05/2025",
+                "EventTime": "2200",
+                "EventDate1": "15th May 2025",
+                "EventTime1": "10:00 PM",
+                "Location": "Koeln",
+                "Status": "Departed from Facility",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "15/05/2025",
+                "EventTime": "1527",
+                "EventDate1": "15th May 2025",
+                "EventTime1": "3:27 PM",
+                "Location": "Bengaluru Airport",
+                "Status": "Departed from Facility",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "15/05/2025",
+                "EventTime": "0844",
+                "EventDate1": "15th May 2025",
+                "EventTime1": "8:44 AM",
+                "Location": "",
+                "Status": "We are experiencing transit delays. We will deliver your package as soon as possible. / Your package",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "14/05/2025",
+                "EventTime": "1424",
+                "EventDate1": "14th May 2025",
+                "EventTime1": "2:24 PM",
+                "Location": "Bengaluru Airport",
+                "Status": "We are experiencing transit delays. We will deliver your package as soon as possible.",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "14/05/2025",
+                "EventTime": "1214",
+                "EventDate1": "14th May 2025",
+                "EventTime1": "12:14 PM",
+                "Location": "Bengaluru Airport",
+                "Status": "Export Scan",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "14/05/2025",
+                "EventTime": "0830",
+                "EventDate1": "14th May 2025",
+                "EventTime1": "8:30 AM",
+                "Location": "Bengaluru Airport",
+                "Status": "Arrived at Facility",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "14/05/2025",
+                "EventTime": "0530",
+                "EventDate1": "14th May 2025",
+                "EventTime1": "5:30 AM",
+                "Location": "Chennai",
+                "Status": "Departed from Facility",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "13/05/2025",
+                "EventTime": "2156",
+                "EventDate1": "13th May 2025",
+                "EventTime1": "9:56 PM",
+                "Location": "Chennai",
+                "Status": "Arrived at Facility",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "13/05/2025",
+                "EventTime": "1927",
+                "EventDate1": "13th May 2025",
+                "EventTime1": "7:27 PM",
+                "Location": "",
+                "Status": "Shipment Manifested Day End Process",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "13/05/2025",
+                "EventTime": "1816",
+                "EventDate1": "13th May 2025",
+                "EventTime1": "6:16 PM",
+                "Location": "CHENNAI",
+                "Status": "SHIPMENT SENT TO CHENNAI",
+                "FlightCode": "",
+                "FlightName": ""
+            },
+            {
+                "EventDate": "13/05/2025",
+                "EventTime": "1650",
+                "EventDate1": "13th May 2025",
+                "EventTime1": "4:50 PM",
+                "Location": "",
+                "Status": "Shipper created a label, UPS has not received the package yet.",
+                "FlightCode": "",
+                "FlightName": ""
+            }
+        ].reverse()
+
+
+
+
+        
+const STATUS_OUT_FOR = 'Out For Delivery Today';
+const STATUS_DELIVERED = 'DELIVERED';
+const STATUS_DELAY_1 = 'We are experiencing transit delays. We will deliver your package as soon as possible.';
+const STATUS_DELAY_2 = 'We are experiencing transit delays. We will deliver your package as soon as possible. / Your package';
+
+
+function parseDateTime(date, time) {
+  return new Date(`${date.split('/').reverse().join('-')}T${time.replace(/(..)(..)/, '$1:$2')}`);
+}
+
+function processTrackingData(data) {
+  const finalStatuses = [];
+  const delayStatus = [];
+  const onTheWay = [];
+
+  for (const { Status, EventDate1, EventDate, EventTime, Location } of data) {
+    const entry = {
+      Status,
+      EventDate1,
+      EventDate,
+      EventTime,
+      Location,
+      timestamp: parseDateTime(EventDate, EventTime)
+    };
+
+    if (Status === STATUS_OUT_FOR || Status === STATUS_DELIVERED) {
+      finalStatuses.push(entry);
+    } else if (Status === STATUS_DELAY_1 || Status === STATUS_DELAY_2) {
+      delayStatus.push({
+        ...entry,
+        Status: 'Custom clearance'
+      });
+    } else {
+      onTheWay.push({ ...entry, Status: 'On the way' });
+    }
+  }
+
+  // Get the latest "On the way" entry
+  const latestOnTheWay = onTheWay.length > 0 ? onTheWay[onTheWay.length - 1] : null;
+
+  // Merge all relevant entries
+  const merged = [
+    ...(latestOnTheWay ? [latestOnTheWay] : []),
+    ...delayStatus,
+    ...finalStatuses
+  ];
+
+  // Remove duplicates based on unique Status
+  const uniqueStatusMap = new Map();
+  for (const item of merged) {
+    if (!uniqueStatusMap.has(item.Status)) {
+      uniqueStatusMap.set(item.Status, item);
+    }
+  }
+
+  // Convert map to array and sort by timestamp
+  return Array.from(uniqueStatusMap.values()).sort((a, b) => a.timestamp - b.timestamp);
+}
+
+
+const fixedStructure = [
+  { Status: 'Custom clearance' },
+  { Status: 'On the way' },
+  { Status: 'Out For Delivery Today' },
+  { Status: 'DELIVERED' }
+];
+
+
+const result = processTrackingData(trackingData);
+
+// Convert result into a lookup map by Status
+const resultMap = new Map(result.map(item => [item.Status, item]));
+
+// Generate final structure
+const updatedStructure = fixedStructure.map(item => {
+  const match = resultMap.get(item.Status);
+  return match
+    ? {
+        ...item,
+        progress: true,
+        EventDate1: match.EventDate1,
+        EventDate: match.EventDate,
+        EventTime: match.EventTime,
+        Location: match.Location
+      }
+    : {
+        ...item,
+        progress: false
+      };
+});
+
+console.log(updatedStructure);

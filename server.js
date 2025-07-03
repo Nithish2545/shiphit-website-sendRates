@@ -5,7 +5,7 @@ import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import vendor from "./routes/routes.js";
 const app = express();
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 8002;
 
 app.use(
   cors({
