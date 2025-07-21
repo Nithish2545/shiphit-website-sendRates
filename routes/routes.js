@@ -1,8 +1,9 @@
 import express from "express";
 
-import getTrackingDetails from "../controller/tracking.js";
+import sendRates from "../controller/sendRates.js";
+import rateLimitByPhone from "../middleware/rateLimiter.js";
 const router = express.Router();
 
-router.route("/getTrackingStatusByAwb").post(getTrackingDetails);
+router.post("/sendRatesToWA", rateLimitByPhone(3, 5 * 60 * 1000), sendRates);
 
 export default router;
