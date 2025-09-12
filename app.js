@@ -4,7 +4,7 @@ import cors from "cors";
 import helmet from "helmet";
 import router from "./routes/routes.js";
 const app = express();
-const PORT = process.env.PORT || 8002;
+const PORT = process.env.PORT || 8080;
 
 app.use(
   cors({
@@ -20,7 +20,6 @@ app.use(helmet());
 app.use("/api/tracking/v1", router);
 
 app.get("/", (req, res) => {
-  console.log(new Date());
   res.send(
     "📦 AWB Tracking API | Status: Online | Last Updated: july 18, 2025"
   );
