@@ -25,7 +25,7 @@ const sendRates = async (req, res) => {
                 placeholders: [country, `₹${amount}`],
               },
             },
-            templateName: "lowratestest3",
+            templateName: "lowratestestfinal",
           },
           from: "+919600690881",
           to: phoneNumber,
