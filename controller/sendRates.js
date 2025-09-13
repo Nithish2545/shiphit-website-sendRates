@@ -19,13 +19,13 @@ const sendRates = async (req, res) => {
       messages: [
         {
           content: {
-            language: "en_US",
+            language: "en",
             templateData: {
               body: {
                 placeholders: [country, `₹${amount}`],
               },
             },
-            templateName: "lowratestestfinal",
+            templateName: "lowratestestfinals5",
           },
           from: "+919600690881",
           to: phoneNumber,
