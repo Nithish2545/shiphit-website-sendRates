@@ -16,7 +16,6 @@ app.use(
     allowedHeaders: "Content-Type,Authorization",
   })
 );
-app.use(
 
 app.use(express.json());
 app.use(helmet());
